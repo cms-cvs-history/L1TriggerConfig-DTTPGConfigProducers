@@ -1,0 +1,8 @@
+
+es_module L1DTConfig = DTConfigTrivialProducer {
+
+        # Incude configuration parametersets
+        include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
+
+  }
+
