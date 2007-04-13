@@ -1,0 +1,2 @@
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigRecords.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfig.cfi"
