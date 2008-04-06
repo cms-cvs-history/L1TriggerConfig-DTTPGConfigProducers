@@ -1,8 +1,9 @@
+#Include configuration ParameterSets
+include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigMap.cff"
 
 es_module L1DTConfig = DTConfigTrivialProducer {
-
-        # Incude configuration parametersets
-        include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
-	include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigMap.cff"
+        using DTTPGParametersBlock
+        using DTTPGMapBlock
   }
 

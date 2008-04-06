@@ -1,3 +1,4 @@
+block DTTPGMapBlock = {
 untracked PSet DTTPGMap = {
   untracked vint32 whm2st1se1 = { 50 , 58 , 50 , 13 }
   untracked vint32 whm2st1se2 = { 50 , 58 , 50 , 13 }
@@ -251,3 +252,4 @@ untracked PSet DTTPGMap = {
   untracked vint32 wh2st4se12 = { 92 , 0 , 92 , 23 }
 }
 
+}
