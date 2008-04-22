@@ -1,0 +1,20 @@
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigBti.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTraco.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTSTheta.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTSPhi.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTU.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigSectColl.cff"
+
+block DTTPGParametersBlock = {
+  PSet DTTPGParameters = {
+    using SectCollParametersBlock
+    PSet TUParameters = {
+      using BtiParametersBlock
+      using TracoParametersBlock
+      using TSPhiParametersBlock
+      using TSThetaParametersBlock
+      using TUParamsBlock
+    }
+    untracked bool Debug = false
+  }
+}

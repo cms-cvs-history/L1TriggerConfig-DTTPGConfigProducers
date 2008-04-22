@@ -1,0 +1,146 @@
+block TSPhiParametersBlock = {
+
+  PSet TSPhiParameters = {
+
+    # Debug flag
+    untracked bool Debug	= 0
+
+    # Priority in TSS for 1st/2nd tracks
+    # 1 is H/L
+    # 2 is In/Out
+    # 3 is Corr/NotCorr
+    # valid parameters are 1,2,3 combinations
+    int32  TSSMSK1    = 312
+    int32  TSSMSK2    = 312
+
+    # Enable/Disable Htrig checking for 1st/2nd tracks & carry in TSS
+    bool TSSHTE1	= 1	# Enabled
+    bool TSSHTE2	= 0
+    bool TSSHTEC	= 0
+
+    # Enable/Disable Inner SL checking for 1st/2nd tracks & carry in TSS
+    bool TSSNOE1	= 1 	# Enabled
+    bool TSSNOE2	= 0
+    bool TSSNOEC	= 0
+
+    # Enable/Disable correlation checking for 1st/2nd tracks & carry in TSS
+    bool TSSCCE1	= 1	# Enabled
+    bool TSSCCE2	= 0
+    bool TSSCCEC	= 0
+	
+    # Ghost 1 suppression options in TSS
+    # 1 If Outer adj to 1st tr
+    # 2 Always
+    # 0 Never
+    int32 TSSGS1	= 1
+	
+    # Ghost 2 suppression options in TSS
+    # 1 If Outer same TRACO of uncorr 1st tr
+    # 2 If Outer same TRACO of 1st tr
+    # 3 Always
+    # 4 If Outer same TRACO of inner 1st tr
+    # 0 Never
+    int32 TSSGS2	= 1
+
+    # Correlated ghost 1 suppression option in TSS
+    # 0 Reject also if Correlated
+    # 1 Accept if correlated
+    bool TSSCGS1	= 1
+	
+    # Correlated ghost 2 suppression option in TSS
+    # 0 Reject also if Correlated
+    # 1 Accept if correlated
+    bool TSSCGS2	= 1
+	
+    # Priority in TSM for 1st/2nd tracks
+    # 1 is H/L
+    # 2 is In/Out
+    # 3 is Corr/NotCorr
+    # valid parameters are 1,2,3 combinations
+    int32  TSMMSK1    = 312
+    int32  TSMMSK2    = 312
+
+    # Enable/Disable Htrig checking for 1st/2nd tracks & carry in TSM
+    bool TSMHTE1	= 1	# Enabled
+    bool TSMHTE2	= 0
+    bool TSMHTEC	= 0
+
+    #Enable/Disable Inner SL checking for 1st/2nd tracks & carry in TSM
+    bool TSMNOE1	= 1 	# Enabled
+    bool TSMNOE2	= 0
+    bool TSMNOEC	= 0
+
+    #Enable/Disable correlation checking for 1st/2nd tracks & carry in TSM
+    bool TSMCCE1	= 1	# Enabled
+    bool TSMCCE2	= 0
+    bool TSMCCEC	= 0
+	
+    # Ghost 1 suppression options in TSM
+    # 1 If Outer adj to 1st tr
+    # 2 Always
+    # 0 Never
+    int32 TSMGS1	= 1
+	
+    # Ghost 2 suppression options in TSM
+    # 1 If Outer same TRACO of uncorr 1st tr
+    # 2 If Outer same TRACO of 1st tr
+    # 3 Always
+    # 4 If Outer same TRACO of inner 1st tr
+    # 0 Never
+    int32 TSMGS2	= 1
+
+    # Correlated ghost 1 suppression option in TSM
+    # 0 Reject also if Correlated
+    # 1 Accept if correlated
+    bool TSMCGS1	= 1
+	
+    # Correlated ghost 2 suppression option in TSM
+    # 0 Reject also if Correlated
+    # 1 Accept if correlated
+    bool TSMCGS2	= 1
+
+    # Handling of second track (carry) in case of pile-up in TSM
+    # 1 Get best 2nd previous BX
+    # 2 Get best 2nd previous BX if 1st is Low
+    # 0 Reject 2nd track
+    int32 TSMHSP	= 1
+
+    # TsmWord used to mask TSMS or TSS
+    #  bit numbering 7 6 5 4 3 2 1 0
+    #
+    #  bit 0 = 1  --> TSMS OK     => normal mode (default)
+    #  bit 0 = 0  --> TSMS broken => back-up mode (see example a)
+    #  bits 1-6 = 0 --> broken TSS (see example b)
+    #  bits 1-6 = 1 --> working TSS (default)
+    int32 TSMWORD	= 255
+
+    # Used Traco mask
+    # 1 means enabled
+    bool TSTREN0  = 1
+    bool TSTREN1  = 1
+    bool TSTREN2  = 1
+    bool TSTREN3  = 1
+    bool TSTREN4  = 1
+    bool TSTREN5  = 1
+    bool TSTREN6  = 1
+    bool TSTREN7  = 1
+    bool TSTREN8  = 1
+    bool TSTREN9  = 1
+    bool TSTREN10 = 1
+    bool TSTREN11 = 1
+    bool TSTREN12 = 1
+    bool TSTREN13 = 1
+    bool TSTREN14 = 1
+    bool TSTREN15 = 1
+    bool TSTREN16 = 1
+    bool TSTREN17 = 1
+    bool TSTREN18 = 1
+    bool TSTREN19 = 1
+    bool TSTREN20 = 1
+    bool TSTREN21 = 1
+    bool TSTREN22 = 1
+    bool TSTREN23 = 1
+ 
+  }
+
+}
