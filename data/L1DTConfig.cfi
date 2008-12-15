@@ -1,9 +1,0 @@
-#Include configuration ParameterSets
-include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigParams.cff"
-include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigMap.cff"
-
-es_module L1DTConfig = DTConfigTrivialProducer {
-        using DTTPGParametersBlock
-        using DTTPGMapBlock
-  }
-
