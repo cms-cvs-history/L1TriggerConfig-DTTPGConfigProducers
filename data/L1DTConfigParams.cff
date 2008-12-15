@@ -4,6 +4,7 @@ include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTSTheta.cff"
 include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTSPhi.cff"
 include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigTU.cff"
 include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigSectColl.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigLUTs.cff"
 
 block DTTPGParametersBlock = {
   PSet DTTPGParameters = {
@@ -14,6 +15,7 @@ block DTTPGParametersBlock = {
       using TSPhiParametersBlock
       using TSThetaParametersBlock
       using TUParamsBlock
+      using LUTParametersBlock
     }
     untracked bool Debug = false
   }

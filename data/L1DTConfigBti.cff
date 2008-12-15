@@ -1,7 +1,7 @@
 block BtiParametersBlock = {
   PSet BtiParameters = {
 
-    untracked int32 Debug 	= 0	# Debug flag 
+    untracked int32 Debug 	= 1	# Debug flag 
     int32 KMAX 	= 64		# Max K param accepted
     int32 KACCTHETA = 1		# BTI angular acceptance in theta view
     bool XON 	= 0		# X-patterns (time ind. K eq.) not activated

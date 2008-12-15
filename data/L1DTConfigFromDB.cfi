@@ -1,0 +1,62 @@
+#Include configuration ParameterSets
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigParams.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigMap.cff"
+
+
+  source = EmptyIOVSource {
+    string timetype = "runnumber"
+#    untracked uint32 firstRun =63200 
+#    untracked uint32 lastRun = 63200
+    untracked uint32 firstRun = 67838
+    untracked uint32 lastRun = 67838
+    uint32 interval = 1
+  }
+  
+  
+# this to retrive the record
+  es_source = PoolDBESSource {
+        VPSet toGet = {
+               {
+                string record = "DTCCBConfigRcd"
+                string tag = "conf_ccb_V01"
+               }
+        }
+        bool loadAll = true
+
+        //string connect = "oracle://cms_orcoff_prod/CMS_COND_21X_DT"
+        string connect = "sqlite_file:conf67838.db"
+        string timetype = "runnumber"
+        string token = "[DB=00000000-0000-0000-0000-000000000000][CNT=DTConfigList][CLID=9CB14BE8-30A2-DB11-9935-000E0C5CE283][TECH=00000B01][OID=00000004-00000000]"
+
+        PSet DBParameters = {
+                untracked string authenticationPath="/afs/cern.ch/cms/DB/conddb"
+                untracked int32 messageLevel=0
+                }
+ }
+   
+
+
+es_module L1DTConfig = DTConfigDBProducer {
+        using DTTPGParametersBlock
+        using DTTPGMapBlock
+       bool cfgConfig = false	
+
+       // trigger chips debug flags 
+       bool debugDB 	   = 0
+       int32 debugBti      = 0
+       int32 debugTraco  = 0
+       bool debugTSP     = 0
+       bool debugTST     = 0
+       bool debugTU 	    = 0
+       bool debugSC       = 0
+       bool debugLUTs    = 0
+       
+       string catalog = "file:testcatalog.xml"
+       string authPath = "/afs/cern.ch/cms/DB/conddb"
+       bool siteLocalConfig = false
+       string contact = "oracle://cms_orcoff_prod/CMS_COND_21X_DT"
+       string tag = "conf_ccb_V01"
+       string token = "[DB=00000000-0000-0000-0000-000000000000][CNT=DTConfigList][CLID=9CB14BE8-30A2-DB11-9935-000E0C5CE283][TECH=00000B01][OID=00000004-00000000]"
+ 
+  }
+

@@ -1,0 +1,3 @@
+include "Geometry/MuonNumbering/data/muonNumberingInitialization.cfi"
+//include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigRecords.cff"
+include "L1TriggerConfig/DTTPGConfigProducers/data/L1DTConfigFromDB.cfi"
