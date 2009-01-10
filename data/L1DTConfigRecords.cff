@@ -1,8 +1,0 @@
-
-  es_source rcdsrc = EmptyESSource {
-    string recordName = "DTConfigManagerRcd"
-    vuint32 firstValid = { 1 }
-    bool iovIsRunNotTime = true
-  }
-
-
